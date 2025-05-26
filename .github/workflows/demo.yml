@@ -29,7 +29,7 @@ jobs:
       - name: store artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist-file # any name
+          name: deploy-dist # any name
           path: dist
   deploy:
     needs: build
@@ -38,7 +38,7 @@ jobs:
       - name: get artifacts
         uses: actions/download-artifact@v3
         with:
-          name: dist-file # same name as mentioned in the store step
+          name: deploy-dist # same name as mentioned in the store step
       - name: output
         run: ls
       - name: Deploy
