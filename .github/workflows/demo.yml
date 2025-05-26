@@ -1,9 +1,5 @@
 name: Deploy website
-on:
-  push:
-    branches:
-      - master
-  woworkflow_dispatch:
+on: workflow_run
 jobs:
   test:
     runs-on: ubuntu-latest
